@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="admin-profile.html">Профиль</a></li>
+                <li><a href="#" id="logout-btn">Выйти</a></li>
+            </ul>
+            <a href="index.html" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#" id="logout-btn">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin section">
+        <div class="container">
+            <h1 class="section-title">Управление проектами</h1>
+
+            <!-- Форма добавления/редактирования -->
+            <div class="admin-form">
+                <h2 id="form-title">Добавить проект</h2>
+                <form id="project-form">
+                    <input type="hidden" id="project-id">
+                    <div class="form-group">
+                        <label for="title">Название</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Описание</label>
+                        <textarea id="description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack">Технологии (через запятую)</label>
+                        <input type="text" id="tech-stack" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="github-url">GitHub URL</label>
+                        <input type="url" id="github-url">
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-url">Demo URL</label>
+                        <input type="url" id="demo-url">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Создать</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none;">Отмена</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Список проектов -->
+            <div class="projects-list" id="projects-list">
+                <div class="loading">Загрузка...</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <nav class="nav container">
+            <ul class="nav-links">
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="admin.html" class="admin-link">Админка</a></li>
+            </ul>
+            <a href="#" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <h1>Привет, я <span class="highlight">Разработчик</span></h1>
+            <p class="subtitle">Backend Developer | Python | FastAPI</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Мои работы</a>
+                <a href="#contact" class="btn btn-secondary">Связаться</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="about section">
+    <div class="container">
+        <h2 class="section-title">Обо мне</h2>
+        <div class="about-content" id="about-content">
+            <div class="loading">Загрузка информации...</div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Мои проекты</h2>
+            <div class="projects-grid" id="projects-container">
+                <!-- Проекты загрузятся через JS -->
+                <div class="loading">Загрузка проектов...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Связаться со мной</h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Сообщение" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+            <div id="form-message" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

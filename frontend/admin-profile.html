@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление профилем</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="admin.html">Проекты</a></li>
+                <li><a href="#" id="logout-btn">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin section">
+        <div class="container">
+            <h1 class="section-title">Управление профилем</h1>
+
+            <form id="profile-form" class="admin-form">
+                <h2>Основная информация</h2>
+                <div class="form-group">
+                    <label for="full-name">ФИО</label>
+                    <input type="text" id="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Возраст</label>
+                    <input type="number" id="age">
+                </div>
+                <div class="form-group">
+                    <label for="photo-file">Фотография (загрузить с компьютера)</label>
+                    <input type="file" id="photo-file" accept="image/*">
+                    <input type="hidden" id="photo-url">
+                    <small>Разрешены форматы: JPG, PNG, WEBP</small>
+                </div>
+                <div class="form-group">
+                    <label for="bio">О себе</label>
+                    <textarea id="bio" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="goals">Цели</label>
+                    <textarea id="goals" rows="3"></textarea>
+                </div>
+
+                <h2>Образование</h2>
+                <div id="education-list"></div>
+                <button type="button" class="btn btn-secondary" onclick="addEducation()">+ Добавить образование</button>
+
+                <h2>Опыт работы</h2>
+                <div id="experience-list"></div>
+                <button type="button" class="btn btn-secondary" onclick="addExperience()">+ Добавить опыт работы</button>
+
+                <div class="form-buttons" style="margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/admin-profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #8b5cf6;
+    --dark-color: #1e293b;
+    --light-color: #f8fafc;
+    --text-color: #334155;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background: var(--dark-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero секция */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 150px 0 100px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #fbbf24;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Кнопки */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Секции */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+}
+
+/* Обо мне */
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.skill-tag {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Проекты */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-badge {
+    background: var(--light-color);
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+/* Форма контактов */
+.contact {
+    background: white;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+}
+
+.form-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    display: block;
+}
+
+.form-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    display: block;
+}
+
+/* Подвал */
+.footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Загрузка */
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    grid-column: 1 / -1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Профиль */
+.profile-header {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-info h3 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile-age {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.profile-bio {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.profile-section {
+    margin-bottom: 2.5rem;
+}
+
+.profile-section h4 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.timeline-year {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h5 {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-company,
+.timeline-degree {
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.current-badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+/* Контакты */
+.contacts-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.contact-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Адаптивность профиля */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Плейсхолдер для фото */
+.profile-photo-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 5px solid white;
+}
